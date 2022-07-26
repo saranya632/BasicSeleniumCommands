@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <test name="Functionaltest" parallel="methods" thread-count="3">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="http://demowebshop.tricentis.com/"/>
+        <classes>
+            <class name="com.obs.seleniumBasics.SeleniumCommands">
+                <methods>
+                    <include name="verifyHomePageTitle"/>
+                    <exclude name="verifyWindowHandles"/>
+                    <include name="verifyfileUpload"/>
+                    <exclude name="verfyFileUploadRobot"/>
+                    <include name="verifyScreenShot"/>
+                    <exclude name="verifyValidloginExcel"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
